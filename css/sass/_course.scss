@@ -1,0 +1,248 @@
+.content-course
+{
+    background-color: $background-banner;
+
+
+    &.clip-1
+    {
+        clip-path: polygon(0 0, 100% 3%, 100% 97%, 0 100%);
+    }
+
+    &.clip-2
+    {
+        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+    }
+
+    
+    .title
+    {
+      
+        margin-top: 2.5rem;  
+    }
+
+    .link-course
+    {
+      
+        margin-top: 1rem;
+        display: block;
+       
+
+        .image-course
+        {
+            height: 12rem;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        @include resposive($xs-1)
+        {
+            .image-course
+            {
+                height: 13rem;
+                width: 100%;
+             
+            }
+            
+        }
+    }
+
+    .boton
+    {
+        grid-area:boton;
+        width: 15rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+.content-course-information
+{
+
+  .course-image{
+       
+     @extend %image-content;
+  }
+
+}
+
+@include resposive($s)
+{
+    .content-course
+    {
+        .content-links
+        {
+            display: grid;
+            &.grid-s-f2-c2
+            {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,1fr) ;
+
+                .link-course:last-of-type
+                 {
+                    grid-column: 1 / span 2;
+                    .image-course
+                    {
+                        height: 14rem;
+                    }
+                } 
+            }
+
+            &.grid-s-f1-c2
+            {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows:1fr;
+            }
+      
+        
+            grid-gap:2% 1%;
+            
+
+            .link-course
+            {
+                margin-top: 0rem;
+                .image-course
+                {
+                    height: 100%;
+                }
+            }
+
+                   
+        }
+
+        .boton
+        {
+            margin-top: 2rem;
+        }
+
+        @include resposive($m)
+        {
+            .content-links
+            {
+                &.grid-m-f1-c3
+                {
+                    grid-template-columns: repeat(3,1fr);
+                    grid-template-rows: 1fr;
+
+                    .link-course:last-of-type
+                    {
+                        grid-column: 3;
+                        .image-course
+                        {
+                            height: 100%;
+                        }
+                    }
+                }           
+            }
+        }
+    }
+
+    .content-course-information
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr) ;
+        grid-gap:2%;
+        text-align: center;
+        align-items: center;
+        .text
+        {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .course-information:first-of-type
+        {
+          grid-column: 1/ span 2;
+
+         
+        }
+        .course-information
+        {
+            &:nth-of-type(n + 2)
+            {
+                display: grid;
+                grid-template-columns: subgrid;
+                grid-template-rows: min-content 6rem min-content;
+            }
+            .course-image
+            {
+                width: 15rem;
+                height: 12rem;
+            }
+        }
+    }
+
+} 
+
+
+
+.content-dsc-curse
+{
+
+    background: #a8caf79c;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 93%;
+    margin: 3rem auto;
+    position: relative;
+
+    .icon
+    {
+     position: relative;
+        &::after
+        {
+            content: url(attr(data-source));
+            position: absolute;
+        }
+    }
+    .image-curse
+    {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    @include resposive($s1)
+    {
+        &{
+            display: flex;
+            gap:2%;
+        }
+
+        .image-curse
+        {
+            order: 2;
+            max-width: 100%;
+            width: 15rem;
+            flex-basis: 50%;
+            height:  15rem;
+            align-self: center;
+
+          
+        }
+
+        .dsc-curse
+        {
+            flex-basis: 50%;
+            .title{
+                text-align: center;
+            }
+        }
+
+    }
+
+    @include resposive($m)
+    {
+        &{
+            padding: 0rem;
+            width: 98%;
+        }
+
+        .image-curse
+        {          
+            height: 20rem;
+        }
+    }
+
+}

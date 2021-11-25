@@ -1,0 +1,86 @@
+
+
+.content-contact
+{
+  background-color: $background-banner;
+  padding-top: 2.5rem;
+  color:white;
+
+  &.clip-1
+  {
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+  }
+
+  &.color-black{
+    color:black;
+  }
+
+  &.bk-trasparent
+  {
+    background: transparent;
+  }
+
+  .contact-image{
+
+    &.show{
+      display: none;
+    }
+  }
+
+  form.content-form
+  {
+
+      .group-form
+      {
+        margin-bottom: .5rem;         
+      }
+  }
+
+}
+
+
+@include resposive($m)
+{
+  .content-contact
+  {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+  
+   .title{
+     flex-basis: 100%;
+     margin-top: 1rem;
+   }
+
+  .contact-image
+  {
+    height: 297px;
+    &.show
+    {
+      display: block;
+    }
+    flex-basis: 49%;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  
+  }
+
+  form.content-form
+  {
+    flex-basis: 49%;
+      .group-form
+      {
+        margin-bottom: .5rem;         
+      }
+
+    .boton{
+      width: 10rem;
+    }
+  }
+
+ }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso</title>
+    <link  rel="stylesheet" href="css/styles.css" />
+    <script src="./js/pagina-product.js"></script>
+    <script src="./js/nav-bar.js" ></script>
+</head>
+<body>
+    
+    <header>
+        <nav class="content-navbar">
+            <a id="botonM" class="content-icon" href="#"><img class="icon" src="./icon/justify.svg"></a>
+            <h1 class="title white">Edosoft</h1>
+            <div  id="content-menu" class="content-menu invisible">
+                <ul id="menu" class="menu invisible">
+                    <li class="menu-item"><a class="item-link" href="./index.html">Inicio</a></li>
+                    <li class="menu-item"><a href="#"class="item-link-submenu">cursos</a>
+                         <ul class="submenu invisible">
+                             <li class="submenu-item"><a class="item-link" href="./curso.html?1">HTML Desde Cero</a></li>
+                             <li class="submenu-item"><a class="item-link" href="./curso.html?2">CSS Desde Cero</a></li>
+                             <li class="submenu-item"><a class="item-link" href="./curso.html?3">JavaScript Desde Cero</a></li>
+                         </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+     </header>
+
+    <main>
+  
+        <div class="content-dsc-curse">
+            <img src="/images/Curso1.png" alt="curse" id="image-curse" class="image-curse">
+            <div class="dsc-curse">
+                <h1 class="title left upper blue" id="title-curse"></h1>
+                <p class="text left" id="dsc-curse"></p>
+                <p class="text left" id="nivel-curse" data-text="Nivel:"></p>  
+                <p class="text left" id="time-curse"  data-text="Duración:"></p> 
+                <p class="text left" id="cost-curse"  data-text="Costo:" data-moneda="₡"></p> 
+                <a href="#contact" class="boton type2 blue center hover">Comprar</a>                       
+            </div>
+          
+        </div>
+
+        <div class="content-course clip-2">
+            <h2 class="title center upper white">Estudie con nosotros y aprenda a su tiempo</h2>
+            <div class="content-links grid-s-f1-c2" id="content-links">
+
+            </div>
+        </div>
+
+        <div class="content-contact color-black bk-trasparent">
+            <h2 class="title black center">Contacténos</h2>
+            <div class="contact-image show">
+             <img  alt="Contactenos" src="./images/image10.jpg">
+            </div>
+           <form id="contact" class="content-form">
+               
+               <div class="group-form">
+                   <label class="text black" for="name">Nombre</label>
+                   <input class="text" type="text" id="name">
+               </div>
+
+               <div class="group-form">
+                   <label class="text black" for="email">Correo</label>
+                   <input class="text" type="email" id="email">
+               </div>
+
+               <div class="group-form">
+                   <label class="text black" for="age">Edad</label>
+                   <input class="text" type="number" id="age">
+               </div>
+               
+               <div class="group-form">
+                   <label class="text black" for="sex">Género</label>
+                   <select class="text" id="sex">
+                       <option selected value="h" disabled>Seleccione uno</option>
+                       <option value="h">Masculino</option>
+                       <option value="m">Femenino</option>
+                   </select>
+               </div>
+
+               <a href="#"class="boton type2 center blue-1 w-100 mtop-2 h-2 hover-1">Enviar</a>
+           </form>
+        </div>
+    </main>    
+    <footer class="footer">
+        <a href="#"><img alt="facebook" src="./icon/facebook.svg"></a>
+        <a href="#"><img alt="instagram" src="./icon/instagram.svg"></a>
+        <a href="#"><img alt="youtube" src="./icon/youtube.svg"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+
+.title
+{
+    --color:rgba(128, 128, 128, 0.801);
+    color: var(--color);
+    font-size: 1.5rem;
+    margin-top: 0;
+
+    &.center{
+        text-align: center;
+    }
+
+    &.left
+    {
+        text-align: left;
+    }
+
+    &.right{
+        text-align: right;
+    }
+
+    &.lower
+    {
+        text-transform: lowercase;
+    }
+
+    &.upper
+    {
+        text-transform: uppercase;
+    }
+
+    &.blue{
+        --color:rgba(18, 18, 145, 0.733);
+    }
+
+    &.white{
+        --color:rgba(255, 255, 255, 0.753);
+    }
+
+    &.upper
+    {
+        text-transform: uppercase;
+    }
+
+    &.lower
+    {
+        text-transform: lowercase;
+    }
+
+    &.p-1{
+        padding: 1rem;
+    }
+
+}
+
+.text
+{
+    --color:rgba(0, 0, 0, 0.747);
+    color: var(--color);
+    margin-top: 0;
+    font-size: 1.2rem;
+
+    &.banner
+    {
+        font-size: 1.2rem;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    &.upper
+    {
+        text-transform: uppercase;
+    }
+
+    &.lower
+    {
+        text-transform: lowercase;
+    }
+
+    &.center{
+        text-align: center;
+    }
+
+    &.left
+    {
+        text-align: left;
+    }
+
+    &.right{
+        text-align: right;
+    }
+
+    &.white{
+        --color:rgba(255, 255, 255, 0.753);
+    }
+
+    &.p-1{
+        padding: 1rem;
+    }
+
+}
+

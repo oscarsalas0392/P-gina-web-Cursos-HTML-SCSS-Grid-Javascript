@@ -1,0 +1,123 @@
+
+
+$background-banner: #1d3557;
+
+
+.content-banner
+{
+    width: 100%;
+    position: relative;
+    top:0;  
+    height: 18rem;
+
+    .banner
+    {
+        background: $background-banner;
+        height: 12rem;
+        clip-path: polygon(0 0, 100% 0%, 100% 87%, 0 100%);
+        overflow: hidden;
+           
+        .text{
+            padding-top: 1rem;      
+         } 
+    }
+
+    
+    .content-image-banner
+    {
+        top: 8rem;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        .image-banner{
+            width: 80%;
+        }
+        
+        @include resposive($xs-1)
+        {
+            .image-banner{
+                width: 20rem;
+            }
+        } 
+
+              
+   
+    }
+
+    @include resposive($s)
+   {
+        &{
+            height: 20rem;
+
+            .banner
+            {
+                height: 15rem;
+            }
+
+            .content-image-banner
+            {
+                top: 7rem;
+                .image-banner
+                {
+                    width: 30rem;
+                    height: 13rem;
+                }
+                
+            }
+        }
+    }
+    
+    @include resposive($m)
+    {
+       
+        .banner
+        {
+            height: 23rem;
+        }
+        .content-image-banner
+        {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap:1%;
+            justify-content: center;
+            align-items: center;
+            top: 4rem;
+            background: rgba(70, 131, 180, 0.986);
+            border-radius: 5px;
+            width: 90%;
+            left:50%;
+   
+            height: 15rem;
+            transform: translateX(-50%);
+            .invisible
+            {
+                display:block;
+            }
+            .image-banner
+            {
+                justify-self: center;
+                //animation: aumentar 5s infinite linear;
+            }
+        }
+        
+    }
+}
+
+@keyframes aumentar
+{
+    10% 
+   {
+       transform: scale(1);
+   }
+
+   20%
+   {
+    transform: scale(1.02);
+   }
+
+}
+
+
+
+

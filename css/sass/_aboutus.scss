@@ -1,0 +1,80 @@
+%image-content
+{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    transition: .5s transform;
+}
+
+.content-aboutUs
+{    
+    .abouts-information
+    {      
+       .aboutus-image
+        {         
+            @extend %image-content;           
+        }
+
+        @include resposive($xs-1)
+        {
+         .aboutus-image
+          {
+            width: 30%;
+          }            
+        }
+
+        .aboutus-image:hover
+        {
+            transform: scale(1.1);
+        }
+
+    }
+  
+}
+
+@include resposive($s)
+{
+    .content-aboutUs
+    {
+        display: grid;       
+        grid-template-rows: repeat(2,1fr) ;
+        grid-template-columns: repeat(2,1fr);
+        gap:2%;
+        margin-top: 2rem;
+
+        .abouts-information
+        {
+           
+            border-radius: 3px;
+            text-align: center;
+                   
+            .aboutus-image
+            {
+                width: 40%;
+            }
+
+            .text
+            { 
+                padding-left: 1rem;
+                padding-right: 1rem;
+               
+            }
+        }
+    }
+
+}
+
+
+@include resposive($m)
+{
+    .content-aboutUs
+    {
+        grid-template-rows: repeat(2,1fr) ;
+        grid-template-columns: repeat(3,1fr);
+
+        .abouts-information:first-of-type
+        {
+            grid-column: 1/ span 3;
+        }
+    }
+}

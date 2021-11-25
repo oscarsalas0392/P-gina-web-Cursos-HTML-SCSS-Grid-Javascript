@@ -1,0 +1,188 @@
+
+
+$background-bar:steelblue;
+$height-bar:3rem;
+
+
+header
+{
+    position: sticky;
+    top: 0;
+    height: $height-bar;
+    background: $background-bar;
+    width: 100%;
+    z-index: 500;
+
+    .content-navbar
+    {
+        height: 100%;
+        .title{
+            display: inline-block;      
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 2.5rem;
+            text-align: center;            
+            width: 100%;
+        }
+   
+        .content-icon
+        {
+            height: 100%;
+            display: inline-block;
+            z-index: 10;
+            position: relative;
+            .icon
+            {
+                height: 100%;
+            }
+        }
+
+        .content-menu
+        {
+            &.invisible
+            {
+                opacity: 0;
+            }
+
+            position: fixed;
+            top:$height-bar;
+            width: 100%;
+            height: calc( 100vh - #{$height-bar});
+            background-color: rgba(128, 128, 128, 0.521);
+
+            .menu
+            {
+
+                &.invisible
+                {
+                    top:-100vw;
+                }
+
+                position: relative;
+                top:0;
+                background-color: darken($color:steelblue, $amount:10);
+                height:100% ;
+                width: 60%;
+
+                .menu-item
+                {
+                    color: white;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    padding: 1rem;
+
+                    .item-link-submenu{
+                        display: block;
+                    }
+
+                    .submenu
+                    {
+                        &.invisible
+                        {
+                            height: 0;
+                        }
+                        
+                        overflow: hidden;
+                        display: inline-block;
+                        .submenu-item
+                        {                            
+                            @extend .menu-item;
+                            font-size: .8em;                           
+                        }
+                    }
+                }
+
+
+                
+            }
+        }
+    }
+}
+
+
+@include resposive($m)
+{
+    header
+    {
+        .content-navbar
+        {
+            display: block;  
+            .content-icon
+            {
+             display: none;
+            } 
+
+            .content-menu
+            {
+                position: relative;
+                background-color: transparent;
+                height: 100%;
+                top:0;
+                
+                display: block;
+                &.invisible{
+                        opacity:1 ;
+                }
+        
+                .menu
+                {
+                    display: flex;
+                    background:transparent;
+                    top:0;
+                    margin-left: 2rem;
+
+                    &.invisible{
+                        top:0;
+                    }
+
+                    .menu-item
+                    {
+                        position: relative;
+                        padding: 0;
+                        
+
+                        .item-link,.item-link-submenu{
+                            line-height: 48px;
+                            padding: 1rem;
+                            display: inline;
+                        }
+
+                        &:hover
+                        {
+                            background: rgb(5, 9, 71);
+                            & ul:last-of-type
+                            {
+                                display: block;
+                            }
+                        }
+
+                        .submenu
+                        {
+                            position: absolute;
+                            left: 0;
+                            background: inherit;
+                            width: 20rem;
+                            display: none;
+                            top:$height-bar;
+                            &.invisible
+                            {
+                                height: 9rem;
+                            }
+
+                            .menu-item:hover{
+                                background-color: rgb(16, 24, 128);
+                            }
+                        }
+                    }
+                }
+        
+            }
+        }
+
+        
+    }
+
+ 
+}

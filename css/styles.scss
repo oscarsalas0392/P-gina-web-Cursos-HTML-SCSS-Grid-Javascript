@@ -1,0 +1,36 @@
+
+
+$font-size-boton:1.4rem;
+$background-color:#eff3f5;
+$background-banner: #1d3557;
+
+
+//breakpoints
+$xs-1:440px;
+$xs-2:600px;
+$s:720px;
+$s1:960px;
+$m:1280px;
+ 
+
+
+
+//media query
+@mixin resposive($min-width)
+{
+    @media screen and (min-width:$min-width)
+    {
+        @content;
+    }
+}
+
+
+@import 'sass/base';
+@import 'sass/text';
+@import 'sass/boton';
+@import 'sass/navbar';
+@import 'sass/banner';
+@import 'sass/aboutus';
+@import 'sass/course';
+@import 'sass/form';
+@import 'sass/icon';

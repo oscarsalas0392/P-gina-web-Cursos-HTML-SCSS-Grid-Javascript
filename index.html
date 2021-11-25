@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="css/styles.css" />
+    <script src="./js/nav-bar.js" ></script>
+    <script src="./js/correo.js" defer ></script>
+</head>
+<body>
+    <header>
+        <nav class="content-navbar">
+            <a id="botonM" class="content-icon" href="#"><img class="icon" src="./icon/justify.svg"></a>
+            <h1 class="title white">Edosoft</h1>
+            <div  id="content-menu" class="content-menu invisible">
+                <ul id="menu" class="menu invisible">
+                    <li class="menu-item"><a class="item-link" href="./index.html">Inicio</a></li>
+                    <li class="menu-item"><a href="#"class="item-link-submenu">cursos</a>
+                         <ul class="submenu invisible">
+                             <li class="submenu-item"><a class="item-link" href="./curso.html?1">HTML Desde Cero</a></li>
+                             <li class="submenu-item"><a class="item-link" href="./curso.html?2">CSS Desde Cero</a></li>
+                             <li class="submenu-item"><a class="item-link" href="./curso.html?3">JavaScript Desde Cero</a></li>
+                         </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+     </header>
+
+     <main> 
+        <div class="content-banner">
+            <div class="banner">
+                <p class="text banner upper center white p-1">Estudia con nosotros y aprende las mejores tecnologías de programación del mercado</p>
+            </div>
+            <div class="content-image-banner">
+             
+                <div class="invisible">
+                     <h2 class="title white upper">front end web Developer</h2>
+                     <p class="text white p-1">Conviértete en un gran desarrollador Web utilizando HTML,CSS3,JavaScript</p>
+                     <a href="#aboutUs" class="boton type2 blue mtop-1 center hover">Conoce mas</a>
+                </div>
+
+                <picture >
+                    <source class="image-banner" srcset="./images/image1.png" media="(max-width:1280px)">
+                    <source class="image-banner" srcset="./images/image9.png" media="(min-width:1280px)">
+                    <img class="image-banner" srcset="./images/image1.png" alt="responsive">
+                </picture> 
+
+            </div>
+        </div>
+
+        <div id="aboutUs" class="content-aboutUs">
+            <div class="abouts-information">
+                <h2 class="title">¿Que es Edosoft?</h2>
+                <p class="text">Somos un equipo de profesionales con una gran experiencia en el desarrollo front end web Developer, los cuáles desean compartir su conocimiento con otras personas.</p>
+                <img class="aboutus-image" src="images/image3.png" alt="video"/>
+            </div>
+
+            <div class="abouts-information">
+                <h2 class="title">¿Como son nuestros cursos?</h2>
+                <p class="text">Son videos grabados por nuestros profesores profesionales,en donde el estudiante podrá estudiar cuando guste y así le ayudará con distintos recursos.</p>
+                <img class="aboutus-image" src="images/image2.png" alt="video"/>
+            </div>
+
+            <div class="abouts-information">
+                <h2 class="title">¿En que ayudan nuestros cursos?</h2>
+                <p class="text">Los estudiantes mejorarán su nivel profesional, para poder obtener un empleo  propio o bien ingresar a una empresa.</p>
+                <img class="aboutus-image" src="images/image4.png" alt="video"/>
+            </div>
+
+            
+            <div class="abouts-information">
+                <h2 class="title">¿Tenemos certificados?</h2>
+                <p class="text">Una vez que el estudiante finalice el curso se le hará un examen final,el cuál se pasa con una calificación de 80, es por eso que si el estudiante gana el examen se le entregará un certicado.</p>
+                <img class="aboutus-image" src="images/image5.png" alt="video"/>
+            </div>
+
+        </div>
+
+        <div class="content-course clip-1 ">
+           <h2 class="title center upper white">Estudie con nosotros y aprenda a su tiempo</h2>
+           <div class="content-links grid-s-f2-c2 grid-m-f1-c3">
+                <a href="./curso.html?1" class="link-course"><img class="image-course"  src="images/Curso1.png" alt="Curso HTML"></a>
+                <a href="./curso.html?2" class="link-course"><img class="image-course" src="images/Curso2.png" alt="Curso CSS"></a>
+                <a href="./curso.html?3" class="link-course"><img class="image-course" src="images/Curso3.jpg" alt="Curso JavaScript"></a>   
+           </div>
+           <a href="#contact" class="boton type1 center blue-light h-3 hover">Comienza gratis</a>
+        </div>   
+
+        <div class="content-course-information">
+            <div class="course-information">
+                <h2 class="title blue upper center">Tú tienes el control</h2>
+                <p class="text">Con nuestro sistema puedes supervisar tus avances desde cualquier dispositivo.</p>
+                <img class="course-image" src="images/image6.png" alt="video"/>
+            </div>
+
+            <div class="course-information">
+                <h2 class="title blue upper center">Mide tu progreso</h2>
+                <p class="text">Con nuestro sistema puedes ver un historico del progreso que tienes, cuanto tiempo te falta para finalizar el curso,cuanto progreso llevas en el módulo, entre otras más opciones.</p>
+                <img class="course-image" src="images/image7.png" alt="video"/>
+            </div>
+
+            <div class="course-information">
+                <h2 class="title blue upper center">Objetivo Diario</h2>
+                <p class="text">Puedes indicarle al sistema cuantas horas al día,semana o al mes, el te enviará notificaciones al correo para recordarte que debes estudiar.</p>
+                <img class="course-image" src="images/image8.png" alt="video"/>
+            </div>
+        </div>
+
+         <div class="content-contact clip-1">
+             <h2 class="title white center">Contacténos</h2>
+             <div class="contact-image show">
+              <img  alt="Contactenos" src="./images/image10.jpg">
+             </div>
+            <form id="contact" class="content-form">
+                
+                <div class="group-form">
+                    <label class="text white" for="name">Nombre</label>
+                    <input class="text" type="text" id="name">
+                </div>
+
+                <div class="group-form">
+                    <label class="text white" for="email">Correo</label>
+                    <input class="text" type="email" id="email">
+                </div>
+
+                <div class="group-form">
+                    <label class="text white" for="age">Edad</label>
+                    <input class="text" type="number" id="age">
+                </div>
+                
+                <div class="group-form">
+                    <label class="text white" for="sex">Género</label>
+                    <select class="text" id="sex">
+                        <option selected value="h" disabled>Seleccione uno</option>
+                        <option value="h">Masculino</option>
+                        <option value="m">Femenino</option>
+                    </select>
+                </div>
+
+                <a id="enviar" href="#"class="boton type2 center blue-1 w-100 mtop-2 h-2 hover-1">Enviar</a>
+            </form>
+         </div>
+
+     </main>
+
+     <footer class="footer">
+         
+         <a href="#"><img alt="facebook" src="./icon/facebook.svg"></a>
+         <a href="#"><img alt="instagram" src="./icon/instagram.svg"></a>
+         <a href="#"><img alt="youtube" src="./icon/youtube.svg"></a>
+     </footer>
+
+</body>
+</html>
